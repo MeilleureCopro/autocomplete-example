@@ -2,7 +2,7 @@ function autocompleteWidget(input) {
     var autocomplete = new google.maps.places.Autocomplete(
         input,
         {componentRestrictions: {country: "fr"}, types: ['address']}),
-        baseUrl = 'https://www.meilleurecopro.com/estimation-charges-copropriete-widget';
+        baseUrl = 'https://preprod.meilleurecopro.com/estimation-charges-copropriete-widget';
 
     function buildFullUrl(place) {
         var queryParams = '?address=' + encodeURIComponent(place.formatted_address);
@@ -48,7 +48,9 @@ function autocompleteWidget(input) {
 
         var url = buildFullUrl(place);
 
-        console.log('iframe url : ', url)
+        console.log('redirect to url in 3 seconds: ', url);
+
+        setTimeout(function() { document.location = url; }, 3000);
     });
 }
 
