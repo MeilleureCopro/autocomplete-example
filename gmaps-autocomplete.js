@@ -21,8 +21,8 @@ function autocompleteWidget(input) {
                 queryParams += '&addressCity=' + encodeURIComponent(component['long_name']);
 
             if (component.types.indexOf('postal_code') !== -1) {
-                queryParams += '&addressZipCode=' + encodeURIComponent(component['long_name']).slice(0, 2);
-                queryParams += '&addressDepartment=' + encodeURIComponent(component['long_name']);
+                queryParams += '&addressZipCode=' + encodeURIComponent(component['long_name']);
+                queryParams += '&addressDepartment=' + encodeURIComponent(component['long_name']).slice(0, 2);
             }
 
             if (component.types.indexOf('country') !== -1)
