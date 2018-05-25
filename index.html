@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example autocomplete</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqSLXKT7yIhtCAW1atox00WLufWkaOQc&libraries=places"></script>
 </head>
 <body>
-<section class="hero is-medium is-info is-bold">
+<section class="hero is-info is-bold">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -20,9 +20,135 @@
             <p>
                 <input id="address-input" class="input" type="text" placeholder="Votre adresse">
             </p>
+            <div style="padding-top: 20px">
+                <h3>Url:</h3>
+                <div class="field">
+                    <div class="control is-small">
+                        <input id="iframeUrl" class="input" type="text" placeholder="url">
+                    </div>
+                </div>
+                <h3 style="padding-bottom: 10px">
+                    Query params:
+                </h3>
+                <div class="columns">
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">address</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="address" class="input is-small" type="text" placeholder="address">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressNumber</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressNumber" class="input is-small" type="text" placeholder="addressNumber">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressStreet</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressStreet" class="input is-small" type="text" placeholder="addressStreet">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressCity</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressCity" class="input is-small" type="text" placeholder="addressCity">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressZipCode</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressZipCode" class="input is-small" type="text" placeholder="addressZipCode">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressDepartment</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressDepartment" class="input is-small" type="text" placeholder="addressDepartment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressCountry</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="addressCountry" class="input is-small" type="text" placeholder="addressCountry">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressLat</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="lat" class="input is-small" type="text" placeholder="lat">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-one-quarter">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-small">addressLng</div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input id="lng" class="input is-small" type="text" placeholder="lng">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<iframe id="simulation-widget" src="https://www.meilleurecopro.com/estimation-charges-copropriete-widget" width="100%" height="800"></iframe>
 <script src="gmaps-autocomplete.js"></script>
 </body>
 </html>
